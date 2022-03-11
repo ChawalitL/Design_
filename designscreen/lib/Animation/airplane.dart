@@ -37,15 +37,17 @@ class _AirplaneAnimationState extends State<AirplaneAnimation>
 
   @override
   Widget build(BuildContext context) {
-    return Stack(children: [
-      const Test3(),
-      const Test1(),
-      const Test2(),
-      SlideTransition(
-        position: _animation,
-        child: Image.asset("assets/air3.png",
-            height: 250, width: 250, fit: BoxFit.cover),
-      ),
-    ]);
+    return SingleChildScrollView(
+      child: Stack(children: [
+        const Test3(),
+        const Test1(),
+        const Test2(),
+        SlideTransition(
+          position: _animation,
+          child: Image.asset("assets/air3.png",
+              height: 250, width: 250, fit: BoxFit.cover),
+        ),
+      ]),
+    );
   }
 }
