@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:designscreen/Animation/c1.dart';
 import 'package:designscreen/Animation/c2.dart';
 import 'package:designscreen/Animation/c3.dart';
