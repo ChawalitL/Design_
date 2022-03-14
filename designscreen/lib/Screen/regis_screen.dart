@@ -118,8 +118,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
         validator: (V) {
           if (V!.isEmpty) {
             return "Can't Empty";
-          }
-          else if (passRegisField.text != passConfirmRegisField.text) {
+          } else if (passRegisField.text != passConfirmRegisField.text) {
             return "Password Don't match";
           }
           return null;
@@ -174,7 +173,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
             'Reset',
             textAlign: TextAlign.center,
             style: TextStyle(
-                fontWeight: FontWeight.bold, fontSize: 20, color: Color.fromARGB(255, 255, 0, 0)),
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+                color: Color.fromARGB(255, 255, 0, 0)),
           ),
           onPressed: () {
             userRegisField.clear();
@@ -213,38 +214,41 @@ class _RegisterScreenState extends State<RegisterScreen> {
         body: Center(
           child: Padding(
             padding: EdgeInsets.all(30),
-              child: Form(
-                key: _keyRegis,
-                child: Center(
-                  child: ListView(
-                    children: [Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Let's Register",
-                          style: TextStyle(color: Colors.white, fontSize: 25,fontWeight: FontWeight.bold),
-                          ),
-                        SizedBox(height: 25),
-                        userField,
-                        SizedBox(height: 15),
-                        nameField,
-                        SizedBox(height: 15),
-                        passField,
-                        SizedBox(height: 15),
-                        passcomfirmField,
-                        SizedBox(height: 30),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            buttonRegisField,
-                            buttonResetField,
-                          ],
-                        ),
-                      ],
-                    ),
-                  ]),
-                ),
+            child: Form(
+              key: _keyRegis,
+              child: Center(
+                child: ListView(children: [
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Let's Register",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(height: 25),
+                      userField,
+                      SizedBox(height: 15),
+                      nameField,
+                      SizedBox(height: 15),
+                      passField,
+                      SizedBox(height: 15),
+                      passcomfirmField,
+                      SizedBox(height: 30),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          buttonRegisField,
+                          buttonResetField,
+                        ],
+                      ),
+                    ],
+                  ),
+                ]),
               ),
+            ),
           ),
         ),
       ),

@@ -116,7 +116,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 fontWeight: FontWeight.bold, fontSize: 20, color: Colors.white),
           ),
           onPressed: () {
-            Navigator.of(context).push(HomeToRegister(child: RegisterScreen())).then((value) => _key.currentState!.reset());
+            Navigator.of(context)
+                .push(HomeToRegister(child: RegisterScreen()))
+                .then((value) => _key.currentState!.reset());
           },
         ));
 
