@@ -22,8 +22,8 @@ class _Test1State extends State<Test1> with SingleTickerProviderStateMixin {
 
   @override
   void dispose() {
-    super.dispose();
     _controller1.dispose();
+    super.dispose();
   }
 
   @override

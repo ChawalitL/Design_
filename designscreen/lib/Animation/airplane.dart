@@ -29,8 +29,9 @@ class _AirplaneAnimationState extends State<AirplaneAnimation>
 
   @override
   void dispose() {
-    super.dispose();
     _controller.dispose();
+    super.dispose();
+
   }
 
   @override

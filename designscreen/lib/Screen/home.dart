@@ -3,6 +3,7 @@
 import 'package:designscreen/Animation/airplane.dart';
 import 'package:designscreen/Animation/home_register.dart';
 import 'package:designscreen/Screen/regis_screen.dart';
+import 'package:designscreen/Screen/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -99,6 +100,8 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           onPressed: () {
             print(_key.currentState!.validate());
+            Navigator.of(context)
+                .pushReplacement(RegisterToHome(child: WelcomeScreen()));
           },
         ));
 
